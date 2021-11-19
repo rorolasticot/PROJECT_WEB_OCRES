@@ -1,4 +1,5 @@
 // API : https://openweathermap.org/api
+/*import axios from 'axios';
 // Url API
 const API_URL = "https://api.covid19tracking.narrativa.com/api/";
 
@@ -18,9 +19,8 @@ class Covid_API {
   // Faire la requete à l'API openweathermap
   // Retourne une promise
   GetInfoByCountry() {
-    return axios
-      .get(`${API_URL}${this.country}`, {
-        crossdomain: true
-      })
+    return axios.get(`${API_URL}${this.country}`, {
+      crossdomain: true
+    })
   }
-}
+}*/

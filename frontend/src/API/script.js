@@ -1,9 +1,9 @@
-import './Covid_API.js'
+/*import './Covid_API.js';
 // Fonction appelée lors du click du bouton
 function start(country) {
     console.info(country)
     // Création de l'objet apiWeather
-    const CovidAPI = new Covid_API(country);
+    const CovidAPI = new CovidAPI(country);
     // Appel de la fonction fetchTodayForecast
 
     CovidAPI
@@ -24,9 +24,9 @@ function start(country) {
               document.getElementById(`d${i}-icon-weather-container`).innerHTML = icon;
               document.getElementById(`d${i}-forecast-temp`).innerHTML = `${temp}°C`;
             })*/
-        })
-        .catch(function (error) {
-            // Affiche une erreur
-            console.error(error);
-        });
-}
+/* })
+ .catch(function (error) {
+     // Affiche une erreur
+     console.error(error);
+ });
+}*/
