@@ -1,6 +1,6 @@
 import React from "react";
 
-const API_URL = 'https://api.covid19tracking.narrativa.com/api/2021-11-14/country/France';
+const API_URL = 'https://disease.sh/v3/covid-19/countries/france';
 
 export default class Widget1 extends React.Component {
 
@@ -22,7 +22,7 @@ export default class Widget1 extends React.Component {
             .then((result) => {
                 console.log(result)
 
-                console.log(result.dates["2021-11-14"].countries.France.today_confirmed)
+
                 this.setState({ post: result })
 
             })
@@ -33,13 +33,25 @@ export default class Widget1 extends React.Component {
 
     render() {
         return (
-            <div>
+
+            <article className="NbrCles">
+
+                <header className="ChiffreCles"> Chiffres Clés </header>
+                <ul>
+                    <li className="NbrCas">Nombre de Cas</li>
+                    <li className="NbrDeces">Nombre de décés</li>
+                </ul>
+                <ul>
+                    <li className="ChiffreCas">{this.state.post.cases}</li>
+                    <li className="ChiffreCas">{this.state.post.deaths}</li>
+                </ul>
+
+                {/* <p className="ChiffreCas">{this.state.post.cases}</p>
+                <p className="ChiffreCas">{this.state.post.deaths}</p> */}
 
 
-                {/* {this.state.post.dates["2021-11-14"].countries.France.today_confirmed} */}
 
-
-            </div>
+            </article>
 
 
 
