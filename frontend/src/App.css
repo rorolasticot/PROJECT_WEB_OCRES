@@ -1,12 +1,142 @@
-.row, header, .container {
+.App{
+width: 100%;
+height: 100%;
+}
+
+.row, .container,header {
   display : flex;
   text-align: center;
+  justify-content: center;
+  
 }
+
+
 article {
-  border: 0.1em solid #000000;
+  
   margin-top: 1em;
   margin-left: 1em;
-}
+  margin-right: 1em; 
+  padding: 0.5em  ;
+  background: #FFFFFF;
+  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+  }
+
 p {
     flex : 1;
   }
+
+
+.nbrCas{
+  
+ 
+  font-family: Sarala;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(255, 153, 71);
+
+  }
+  
+.nbrCastoday{
+  
+
+
+  font-weight:lighter;
+  font-size: 1em;
+  color: rgb(255, 153, 71);
+  
+  }
+
+.nbrDeces{ 
+  
+    font-weight: bold;
+    font-size: 2em;
+    color: #43547e;
+   }
+  
+   .nbrDecestoday{ 
+    
+   
+ 
+  font-weight:lighter;
+  
+    font-size: 1em;
+    color: #43547e;
+   }
+
+/* Widget3 */
+.Tableau{
+  width: 25em; 
+  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+}
+tr{
+  text-align: center; 
+}
+.ville{
+  width: 12.5em;
+  height: 2em; 
+  text-align: center;
+ 
+}
+.deces{
+  width: 6.25em; 
+  height: 2em;
+  font-size: large; 
+  font-family: Sarala;
+  font-style: normal;
+  
+  color: #43547e;
+  justify-content: space-around;
+}
+.cas{
+  width: 6.25em; 
+  height: 2em; 
+ 
+  font-family: Sarala;
+  font-style: normal;
+  
+  color:  rgb(255, 153, 71);
+}
+.ecris{
+  font-weight: bold;
+  font-size: large; 
+}
+.today{
+  font-size: small;
+}
+table, th, td {
+  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+}
+/* Widget4 */
+.petitcontainer{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0.5em;
+ 
+    width: 7em;
+    height: 7em;
+    box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+    padding: 0.05em;
+    font-family: Sarala;
+    font-style: normal;
+    
+}
+.nbrDomicil{
+
+margin-bottom:0.2em ;
+  font-weight: bold;
+  font-size: 2em;
+  color: rgb(3, 189, 91);
+}
+.nbrDomiciltoday{
+  margin: top 0.1em;
+  font-weight:lighter;
+  font-size: 1em;
+  color:  rgb(3, 189, 91);;
+}
