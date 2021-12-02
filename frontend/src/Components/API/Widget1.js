@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const API_URL = "https://api.covid19tracking.narrativa.com/api/2021-11-25/country/France";
+const API_URL = "https://api.covid19tracking.narrativa.com/api/2021-12-01/country/France";
 
 
 export default class Widget1 extends React.Component {
@@ -22,7 +22,7 @@ export default class Widget1 extends React.Component {
         const response = await fetch(API_URL);
         const data = await response.json();
         console.log(data);
-        this.setState({ post: data.dates["2021-11-25"].countries.France })
+        this.setState({ post: data.dates["2021-12-01"].countries.France })
     }
     render() {
         return (

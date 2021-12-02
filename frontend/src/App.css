@@ -140,3 +140,18 @@ margin-bottom:0.2em ;
   font-size: 1em;
   color:  rgb(3, 189, 91);;
 }
+
+/* Widget5 */
+
+.colorGraph{
+  color:#FF647C; 
+}
+.containerGraph{
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em; 
+  padding: 0.5em  ;
+  background: #FFFFFF;
+  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+}
