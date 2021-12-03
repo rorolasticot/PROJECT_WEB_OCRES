@@ -1,28 +1,44 @@
-import React from 'react';
+import React from "react";
 
-class SearchBar extends React.Component {
+export default class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputValue: ''
+            inputValue: ""
         };
     }
     render() {
         return (
             <div>
-                <div className="form-container">
-                    <input id="country-input" type="text" className="form-control" placeholder="Rentrer le nom d'un pays" />
-                    <div className="input-group-append">
-                        <button id="country-input-button" className="btn btn-success" type="submit"
-                            onClick={this.props.ComponentDidMount}>Actualiser</button>
+                <form
+                    className="form-container"
+                    onSubmit={this.handleSubmit.bind(this)}
+                >
+                    <input
+                        id="country-input"
+                        type="text"
+                        className="form-control"
+                        placeholder="Rentrer le nom d'un pays"
+                        onChange={(e) => this.handleChange(e)}
+                    />
+                    <div>
+                        <button
+                            id="country-input-button"
+                            className="btn btn-success"
+                            type="submit"
+                        >
+                            Actualiser
+                        </button>
                     </div>
-                </div>
+                </form>
             </div>
         );
     }
-    sayHello() {
-        var url = "https://api.covid19tracking.narrativa.com/api/2021-11-25/country/" + document.getElementById("country-input").value;
-        console.log(url);
-    }
+    handleChange = (e) => {
+        this.props.getCountryCall(e.target.value);     //Pass the data back to Widget1 each time the user types
+    };
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.search();
+    };
 }
-export default SearchBar;
