@@ -21,7 +21,6 @@ export default class Widget1 extends React.Component {
         // console.log(this.country);
         const response = await fetch(API_URL);
         const data = await response.json();
-        console.log(data);
         this.setState({ post: data.dates["2021-11-25"].countries.France })
     }
     render() {

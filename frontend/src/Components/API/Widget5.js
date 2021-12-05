@@ -1,85 +1,146 @@
 import React from "react";
+import { AreaChart } from "recharts";
 
-const API_URL = "https://api.covid19tracking.narrativa.com/api/2021-11-25/country/France";
+import { CartesianGrid } from "recharts";
+import { XAxis } from "recharts";
+import { YAxis } from "recharts";
+import { Tooltip } from "recharts";
+import { Area } from "recharts";
 
+const MONTHS = [
 
+    "janvier",
+    "fevrier",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "aout",
+    "septembre",
+    "octobre",
+    "novembre",
+    "decembre"
+];
 
-const data = [
-    {
-        "name": "Page A",
-        "uv": 4000,
-        "pv": 2400
-    },
-    {
-        "name": "Page B",
-        "uv": 3000,
-        "pv": 1398
-    },
-    {
-        "name": "Page C",
-        "uv": 2000,
-        "pv": 9800
-    },
-    {
-        "name": "Page D",
-        "uv": 2780,
-        "pv": 3908
-    },
-    {
-        "name": "Page E",
-        "uv": 1890,
-        "pv": 4800
-    },
-    {
-        "name": "Page F",
-        "uv": 2390,
-        "pv": 3800
-    },
-    {
-        "name": "Page G",
-        "uv": 3490,
-        "pv": 4300
-    }
-]
 export default class Widget5 extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            janvier: [],
+            fevrier: [],
+            mars: [],
+            avril: [],
+            mai: [],
+            juin: [],
+            juillet: [],
+            aout: [],
+            septembre: [],
+            octobre: [],
+            novembre: [],
+            decembre: []
+        };
+    }
 
+    getData = async () => {
+        MONTHS.map(async (month, index) => {
+            var url = "";
+            var date = "";
+            if (index + 1 < 10) {
+                url = `https://api.covid19tracking.narrativa.com/api/2021-0${index + 1}-01/country/France`;
+                date = `2021-0${index + 1}-01`;
+            }
+            else {
+                url = `https://api.covid19tracking.narrativa.com/api/2021-${index + 1}-01/country/France`;
+                date = `2021-${index + 1}-01`;
+            }
+            const response = await fetch(url);
+            const data = await response.json();
+            this.setState({ [month]: data.dates[date].countries.France })
+        })
+    }
+
+    async componentDidMount() {
+        this.getData();
+    }
 
     render() {
-        var tableau = [{
-            "name": "Mars",
-            "uv": 4000,
-            "pv": 2400
-        },
-        {
-            "name": "Avril",
-            "uv": 3000,
-            "pv": 1398
-        },
+        var data = [
+            {
+                "name": "Janvier",
+                "décès": this.state.janvier.today_deaths
+
+            },
+            {
+                "name": "Février",
+                "décès": this.state.fevrier.today_deaths
+
+            },
+            {
+                "name": "Mars",
+                "décès": this.state.mars.today_deaths
+
+            },
+            {
+                "name": "Avril",
+                "décès": this.state.avril.today_deaths
+
+            },
+            {
+                "name": "Mai",
+                "décès": this.state.mai.today_deaths
+
+            },
+            {
+                "name": "Juin",
+                "décès": this.state.juin.today_deaths
+            },
+            {
+                "name": "Juillet",
+                "décès": this.state.juillet.today_deaths
+            },
+            {
+                "name": "Aout",
+                "décès": this.state.aout.today_deaths
+            },
+            {
+                "name": "Septembre",
+                "décès": this.state.septembre.today_deaths
+            },
+            {
+                "name": "Octobre",
+                "décès": this.state.octobre.today_deaths
+            },
+            {
+                "name": "Novembre",
+                "décès": this.state.novembre.today_deaths
+            },
+            {
+                "name": "Décembre",
+                "décès": this.state.decembre.today_deaths
+
+            }
         ];
-        tableau[0].uv = this.state.post;
         return (
             <div>
-
-                <BarChart width={730} height={250} data={data}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Legend />
-                    <Bar dataKey="pv" fill="#8884d8" />
-                    <Bar dataKey="uv" fill="#82ca9d" />
-                </BarChart>
-
-
-
+                <div className="containerGraph">
+                    <div className="titre">Evolution du nombre de décès par mois en 2021</div>
+                    <AreaChart width={800} height={250} data={data}
+                        margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
+                        <defs>
+                            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor="#4D5FA0" stopOpacity={1} />
+                                <stop offset="95%" stopColor="#4D5FA0" stopOpacity={0} />
+                            </linearGradient>
+                        </defs>
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <CartesianGrid strokeDasharray="0.2 0.2" />
+                        <Tooltip />
+                        <Area type="monotone" dataKey="décès" stroke="//#endregion4D5FA0" fillOpacity={1} fill="url(#colorUv)" />
+                    </AreaChart>
+                </div>
             </div>
         );
     }
 }
-
-
-
-
-
-
-
