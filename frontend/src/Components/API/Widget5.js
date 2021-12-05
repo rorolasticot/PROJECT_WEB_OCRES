@@ -129,9 +129,10 @@ export default class Widget5 extends React.Component {
                         margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
                         <defs>
                             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#4D5FA0" stopOpacity={1} />
-                                <stop offset="95%" stopColor="#4D5FA0" stopOpacity={0} />
+                                <stop offset="5%" stopColor="#4D5FA0" stopOpacity={0.8} />
+                                <stop offset="95%" stopColor="4D5FA0" stopOpacity={0} />
                             </linearGradient>
+
                         </defs>
                         <XAxis dataKey="name" />
                         <YAxis />
