@@ -33,7 +33,7 @@ export default class Widget2 extends React.Component {
                     <div className="row">
                         <div className="petitcontainer">
                             <div className="column">
-                                <div className="nbrVaccines">{this.state.people_fully_vaccinated}</div>
+                                <div className="nbrVaccines">{this.state.post.people_fully_vaccinated}</div>
                                 <div className="nbrVaccinesToday">+{this.state.post.new_vaccinations_smoothed}</div>
                                 <div className="nbrVaccinesToday">Nombre de vaccinés (2 ou 3 doses)</div>
                             </div>

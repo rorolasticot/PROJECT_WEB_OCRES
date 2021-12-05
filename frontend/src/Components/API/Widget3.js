@@ -15,8 +15,8 @@ export default class Widget3 extends React.Component {
     }
 
     search = async () => {
-        const current = new Date();
-        var date = `${current.getFullYear()}-${current.getMonth() + 1}-`;
+        const current = new Date(); //Pour récupérer la date d'aujourd'hui
+        var date = `${current.getFullYear()}-${current.getMonth() + 1}-`; //On lui donne le format souhaité YYYY-MM-DD et on recule de qulques jours pour avoir des données plus pertinentes
         if (current.getDate() - 3 < 10) { date = date + `0${current.getDate() - 3}`; }
         else { date = date + `${current.getDate() - 3}`; }
         const url = `https://api.covid19tracking.narrativa.com/api/${date}/country/${this.state.country}`;

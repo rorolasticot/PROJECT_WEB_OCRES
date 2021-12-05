@@ -10,6 +10,9 @@ const Navigation = () => {
             <NavLink to="/option">
                 Option
             </NavLink>
+            <NavLink to="/map">
+                Map
+            </NavLink>
         </div>
     );
 }
