@@ -9,7 +9,57 @@ height: 100%;
   justify-content: center;
   
 }
+.barre{
+  
+width: 100%;
+height: 4.688em; 
+margin-bottom: 2em;
+background: #FF647C; 
+opacity: 0.2;
+box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
 
+}
+.button{
+  
+width:  5em; 
+height: 1.813em; 
+box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+background: rgba(214, 19, 19, 0.58);
+border-radius: 0.75em;
+font-family: Alef;
+font-style: normal;
+font-weight: bold;
+
+}
+.titreButton{
+ color: #FFFFFF; 
+}
+.titre{
+margin-bottom: 0.2em;
+font-family: Alef;
+font-style: normal;
+font-weight: bold;
+font-size: 1.063em; 
+color: rgba(211, 4, 4, 0.7);
+}
+.petitcontainer{
+  border: 0.05em solid rgba(0, 0, 0, 0.2);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0.8em;
+ 
+    width: 7em;
+    height: 7em;
+    box-shadow: 0.3em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+    padding: 0.05em;
+    font-family: Sarala;
+    font-style: normal;
+    
+}
 
 article {
   
@@ -25,11 +75,9 @@ article {
 p {
     flex : 1;
   }
-
-
+/* 
+Widget2 */
 .nbrCas{
-  
- 
   font-family: Sarala;
   font-style: normal;
   font-weight: bold;
@@ -39,34 +87,40 @@ p {
   }
   
 .nbrCastoday{
-  
-
-
   font-weight:lighter;
   font-size: 1em;
   color: rgb(255, 153, 71);
-  
   }
 
 .nbrDeces{ 
-  
     font-weight: bold;
     font-size: 2em;
     color: #43547e;
    }
   
-   .nbrDecestoday{ 
-    
-   
- 
+.nbrDecestoday{ 
   font-weight:lighter;
-  
-    font-size: 1em;
-    color: #43547e;
+  font-size: 1em;
+  color: #43547e
+    ;
    }
+ /* Widget2 */
+ .nbrVaccine{
+  font-family: Sarala;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.7em; 
+  color: #3056DC; 
 
+  }
+  .nbrVaccineToday{
+    font-weight:lighter;
+    font-size: 1em;
+    color: #3056DC;
+  }  
 /* Widget3 */
-.Tableau{
+.tableau{
+  border: 0.05em solid rgba(0, 0, 0, 0.2);
   width: 25em; 
   box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
   border-radius: 0.75em;
@@ -111,23 +165,8 @@ table, th, td {
 }
 
 /* Widget4 */
-.petitcontainer{
-  position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: 0.5em;
- 
-    width: 7em;
-    height: 7em;
-    box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
-    border-radius: 0.75em;
-    padding: 0.05em;
-    font-family: Sarala;
-    font-style: normal;
-    
-}
+
+
 .nbrDomicil{
 
 margin-bottom:0.2em ;
@@ -144,15 +183,62 @@ margin-bottom:0.2em ;
 
 /* Widget5 */
 
-.colorGraph{
-  color:#FF647C; 
-}
+
 .containerGraph{
+  border: 0.05em solid rgba(0, 0, 0, 0.2);
   margin-top: 1em;
   margin-left: 1em;
   margin-right: 1em; 
   padding: 0.5em  ;
   background: #FFFFFF;
+  box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+ 
+  
+}
+
+/* Option */
+.option{
+  height: 100%;
+  width: 100%;
+  display : flex;
+  justify-content: center;
+}
+.containerPut{
+  margin-top: 1em;
+  display : flex;
+  justify-content: center;
+
+  width: 20em; 
+  height: 15em; 
+  padding: 0.5em  ;
+  background: #FFFFFF;
+  border: 0.05em solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+}
+.text {
+  display : flex;
+  font-family: Alef;
+  font-style: normal;
+  font-size: 0.938em;
+  color: #090909;;
+  justify-content: center;
+  text-align: center;
+}
+
+.entree
+ {display : flex;
+  justify-content: center;
+  text-align: center;
+ }
+
+input{
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+ 
+  border: 0.05em solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
   border-radius: 0.75em;
 }

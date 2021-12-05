@@ -62,20 +62,28 @@ export default class Widget1 extends React.Component {
         if (this.state.error !== undefined && this.state.post !== []) {
             return (
                 <div className="row">
-                    <SearchBar search={this.search}
-                        getCountryCall={this.getCountry.bind(this)} />
-                    <div className="petitcontainer">
-                        <div className="column">
-                            <div className="nbrCas">{this.state.post.today_confirmed}</div>
-                            <div className="nbrCastoday">+{this.state.post.today_new_confirmed}</div>
-                            <div className="nbrCastoday">Nombre de cas</div>
+                    <div className="column">
+
+                        <div className="row">
+                            <SearchBar search={this.search}
+                                getCountryCall={this.getCountry.bind(this)} />
                         </div>
-                    </div>
-                    <div className="petitcontainer">
-                        <div className="column">
-                            <div className="nbrDeces">{this.state.post.today_deaths}</div>
-                            <div className="nbrDecestoday">+{this.state.post.today_new_deaths}</div>
-                            <div className="nbrDecestoday">Nombre de décès</div>
+
+                        <div className="row">
+                            <div className="petitcontainer">
+                                <div className="column">
+                                    <div className="nbrCas">{this.state.post.today_confirmed}</div>
+                                    <div className="nbrCastoday">+{this.state.post.today_new_confirmed}</div>
+                                    <div className="nbrCastoday">Nombre de cas</div>
+                                </div>
+                            </div>
+                            <div className="petitcontainer">
+                                <div className="column">
+                                    <div className="nbrDeces">{this.state.post.today_deaths}</div>
+                                    <div className="nbrDecestoday">+{this.state.post.today_new_deaths}</div>
+                                    <div className="nbrDecestoday">Nombre de décès</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

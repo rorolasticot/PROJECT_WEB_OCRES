@@ -4,12 +4,18 @@ const Navigation = () => {
     return (
 
         <div className="navigation">
-            <NavLink to="/">
-                Home
-            </NavLink>
-            <NavLink to="/option">
-                Option
-            </NavLink>
+            <div className="barre">
+                <div className="button">
+                    <NavLink to="/">
+                        <div className="titreButton"> Home</div>
+                    </NavLink>
+                </div>
+                <div className="button">
+                    <NavLink to="/option">
+                        <div className="titreButton">Option</div>
+                    </NavLink>
+                </div>
+            </div>
         </div>
     );
 }

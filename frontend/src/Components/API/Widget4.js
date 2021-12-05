@@ -34,13 +34,7 @@ export default class Widget1 extends React.Component {
                         <div className="nbrDomiciltoday">Retour à domicile</div>
                     </div>
                 </div>
-                <div className="petitcontainer">
-                    <div className="column">
-                        <div className="nbrDomicil">{this.state.post.today_recovered}</div>
-                        <div className="nbrDomiciltoday">+{this.state.post.today_new_recovered}</div>
-                        <div className="nbrDomiciltoday">Retour à domicile</div>
-                    </div>
-                </div>
+
             </div >
         );
     }

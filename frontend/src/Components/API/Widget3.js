@@ -50,7 +50,8 @@ export default class Widget3 extends React.Component {
 
     render() {
         return (
-            <div className="Tableau">
+            <div className="tableau">
+                <div className="titre">Chiffres Clés par régions</div>
                 <table>
                     <tbody>
                         <tr>

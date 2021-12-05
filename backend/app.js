@@ -1,19 +1,32 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const app = express();
+const router = express.Router();
+const conx = mongoose.connection
+const insertRoute = require('./routes/insert');
+const readRoute = require('./routes/read');
+const PRECAUTIONModel = require("./model");
 
-var app = express();
-
-app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cors());
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
 
-module.exports = app;
+mongoose.connect("mongodb+srv://nicoro:romane@cluster0.bijmi.mongodb.net/disposition?retryWrites=true&w=majority",
+    {
+        useNewUrlParser: true,
+    }
+);
+app.use(insertRoute);
+
+
+
+
+app.use(readRoute);
+
+
+app.listen(3001, () => {
+    console.log('Server running on port 3001 !');
+});
+
