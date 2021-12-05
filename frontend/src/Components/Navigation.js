@@ -15,7 +15,12 @@ const Navigation = () => {
                         <div className="titreButton">Option</div>
                     </NavLink>
                 </div>
+                <NavLink to="/map">
+                    <div className="titreButton">Map</div>
+                </NavLink>
             </div>
+
+
         </div>
     );
 }
