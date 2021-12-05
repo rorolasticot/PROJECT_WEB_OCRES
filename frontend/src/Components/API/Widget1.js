@@ -9,59 +9,52 @@ export default class Widget1 extends React.Component {
         this.state = {
             post: {},
             error: "",
-            country: undefined
+            country: "France",
         };
     }
     componentDidMount() {
         this.search();
     }
     search = async () => {
-        // if (country === "") country = "France"; //Pays par défaut
 
-        // I cleaned up your url using a template literal
-        const url = `https://api.covid19tracking.narrativa.com/api/2021-11-25/country/${this.state.country}`;
-
+        const current = new Date();
+        var date = `${current.getFullYear()}-${current.getMonth() + 1}-`;
+        if (current.getDate() - 3 < 10) { date = date + `0${current.getDate() - 3}`; }
+        else { date = date + `${current.getDate() - 3}`; }
+        const url = `https://api.covid19tracking.narrativa.com/api/${date}/country/${this.state.country}`;
         try {
             if (this.state.country) {
                 const response = await fetch(url); //Fais une requête
                 const data = await response.json(); //fichier .json avec les résultats de la requête
-
-                // Check if the returned country is the correct country that was searched
+                console.log(data.dates[date]);
+                // Check si le pays retourné est celui qui est recherché
                 if (
                     Object.keys(
-                        data.dates["2021-11-25"].countries
-                    )[0].toLocaleLowerCase() === this.state.country.toLowerCase()
+                        data.dates[date].countries
+                    )[0].toLocaleLowerCase() === this.state.country.toLowerCase() || this.state.country === "France"
                 ) {
-                    // If it is, then set your post state to the values (at index 0 since were comparing to the key at index 0)
+                    // S'il l'est alors on set le post à la valeur (ici 0 car on compare avec la clef à l'index 0)
                     this.setState({
-                        post: Object.values(data.dates["2021-11-25"].countries)[0],
+                        post: Object.values(data.dates[date].countries)[0],
                         error: ""
                     });
+
                 } else {
-                    // If not then reset your post state and set an error message
+                    // Sinon on reset le state et on envoie un message d'erreur
                     this.setState({
                         post: {},
                         error: "Please enter a country name"
                     });
+
                 }
             }
         } catch (err) {
             if (err.response) {
                 console.log(err.response.data);
-                // this.setState({
-                //   post: [],
-                //   error: err.response.data.message
-                // });
             }
         }
-    };
-    // GetListCountry = async (array) => {
-    //     const url = "https://api.covid19tracking.narrativa.com/api/countries";
-    //     const response = await fetch(url);
-    //     const data = await response.json();
+    }
 
-    //     const array = data.countries
-    // }
     getCountry = (country_child) => {
         this.setState({ country: country_child });
     };

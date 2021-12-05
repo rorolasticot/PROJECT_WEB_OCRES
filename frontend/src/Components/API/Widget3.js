@@ -1,49 +1,72 @@
 import React from "react";
 
-
-const API_URL = "https://api.covid19tracking.narrativa.com/api/2021-11-25/country/France";
-
-
 export default class Widget3 extends React.Component {
 
-    constructor(props, country) {
+    constructor(props) {
         super(props);
-        this.country = country;
         this.state = {
             region: [],
+            country: "France"
         };
     }
-    // Faire la requete à l'API openweathermap
-    // Retourne une promise
+
     async componentDidMount() {
-        // const url = API_URL.concat("", this.country);
-        // console.log(url);
-        // console.log(this.country);
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        console.log(data);
-        this.setState({ region: data.dates["2021-11-25"].countries.France.regions })
+        this.search();
     }
+
+    search = async () => {
+        const current = new Date();
+        var date = `${current.getFullYear()}-${current.getMonth() + 1}-`;
+        if (current.getDate() - 3 < 10) { date = date + `0${current.getDate() - 3}`; }
+        else { date = date + `${current.getDate() - 3}`; }
+        const url = `https://api.covid19tracking.narrativa.com/api/${date}/country/${this.state.country}`;
+        try {
+            if (this.state.country) {
+                const response = await fetch(url);
+                const data = await response.json();
+                if (Object.keys(data.dates[date].countries)[0]
+                    .toLocaleLowerCase() === this.state.country.toLowerCase() || this.state.country === "France") {
+
+                    this.setState({
+                        region: Object.values(data.dates[date].countries)[0].regions,
+                        error: ""
+                    });
+                }
+                else {
+                    // Sinon on reset le state et on envoie un message d'erreur
+                    this.setState({
+                        post: {},
+                        error: "Please enter a country name"
+                    });
+                }
+            }
+        } catch (err) {
+            if (err.response) {
+                console.log(err.response.data);
+            }
+        }
+
+    }
+
     render() {
         return (
             <div className="Tableau">
                 <table>
-                    <header>
+                    <tbody>
                         <tr>
-                            <th className="ville">Villes</th>
-                            <th className="cas">Nombre de cas</th>
-                            <th className="deces">Nombre de décès</th>
+                            <th className="region" scope="col">Région</th>
+                            <th className="cas" scope="col">Nombre de cas</th>
+                            <th className="deces" scope="col">Nombre de décès</th>
                         </tr>
-                    </header>
-                    {this.state.region.map((regions, index) => (
-                        <div key={`list-elem-${index}`}>
-                            <tr>
-                                <td className="ville"> {regions.name}</td>
+
+                        {this.state.region.map((regions, index) => (
+                            <tr key={`list-elem-${index}`}>
+                                <th className="region" scope="row"> {regions.name}</th>
                                 <td className="cas"> <p className="ecris">{regions.today_confirmed}</p><p className="today">+{regions.today_new_confirmed}</p></td>
                                 <td className="deces"> <p className="ecris">{regions.today_deaths}</p><p className="today">+{regions.today_new_deaths}</p></td>
                             </tr>
-                        </div>
-                    ))}
+                        ))}
+                    </tbody>
                 </table>
             </div>
         );
