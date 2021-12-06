@@ -1,11 +1,11 @@
 import React from "react";
 import { AreaChart } from "recharts";
-
 import { CartesianGrid } from "recharts";
 import { XAxis } from "recharts";
 import { YAxis } from "recharts";
 import { Tooltip } from "recharts";
 import { Area } from "recharts";
+import "./Widget5.css";
 
 const MONTHS = [
 

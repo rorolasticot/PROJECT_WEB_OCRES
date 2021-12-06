@@ -1,0 +1,23 @@
+/* Widget5 */
+.titre{
+    margin-bottom: 0.2em;
+    font-family: Alef;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.063em; 
+    color: rgba(211, 4, 4, 0.7);
+    }
+    
+
+.containerGraph{
+    border: 0.05em solid rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em; 
+    padding: 0.5em  ;
+    background: #FFFFFF;
+    box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+   
+    
+  }

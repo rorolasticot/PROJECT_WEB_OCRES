@@ -5,10 +5,9 @@ height: 100%;
 
 .row, .container,header {
   display : flex;
-  text-align: center;
-  justify-content: center;
-  
+  text-align: center; 
 }
+
 .barre{
   
 width: 100%;
@@ -34,211 +33,18 @@ font-weight: bold;
 .titreButton{
  color: #FFFFFF; 
 }
-.titre{
-margin-bottom: 0.2em;
-font-family: Alef;
-font-style: normal;
-font-weight: bold;
-font-size: 1.063em; 
-color: rgba(211, 4, 4, 0.7);
-}
-.petitcontainer{
-  border: 0.05em solid rgba(0, 0, 0, 0.2);
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: 0.8em;
- 
-    width: 7em;
-    height: 7em;
-    box-shadow: 0.3em 0.25em 0.25em rgba(0, 0, 0, 0.25);
-    border-radius: 0.75em;
-    padding: 0.05em;
-    font-family: Sarala;
-    font-style: normal;
-    
-}
-
-article {
-  
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em; 
-  padding: 0.5em  ;
-  background: #FFFFFF;
-  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
-  border-radius: 0.75em;
-  }
 
 p {
     flex : 1;
   }
-/* 
-Widget2 */
-.nbrCas{
-  font-family: Sarala;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2em;
-  color: rgb(255, 153, 71);
 
-  }
-  
-.nbrCastoday{
-  font-weight:lighter;
-  font-size: 1em;
-  color: rgb(255, 153, 71);
-  }
-
-.nbrDeces{ 
-    font-weight: bold;
-    font-size: 2em;
-    color: #43547e;
-   }
-  
-.nbrDecestoday{ 
-  font-weight:lighter;
-  font-size: 1em;
-  color: #43547e
-    ;
-   }
- /* Widget2 */
- .nbrVaccine{
-  font-family: Sarala;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 1.7em; 
-  color: #3056DC; 
-
-  }
-  .nbrVaccineToday{
-    font-weight:lighter;
-    font-size: 1em;
-    color: #3056DC;
-  }  
-/* Widget3 */
-.tableau{
-  border: 0.05em solid rgba(0, 0, 0, 0.2);
-  width: 25em; 
-  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
-  border-radius: 0.75em;
-}
-tr{
-  text-align: center; 
-}
-.ville{
-  width: 12.5em;
-  height: 2em; 
-  text-align: center;
- 
-}
-.deces{
-  width: 6.25em; 
-  height: 2em;
-  font-size: large; 
-  font-family: Sarala;
-  font-style: normal;
-  
-  color: #43547e;
-  justify-content: space-around;
-}
-.cas{
-  width: 6.25em; 
-  height: 2em; 
- 
-  font-family: Sarala;
-  font-style: normal;
-  
-  color:  rgb(255, 153, 71);
-}
-.ecris{
-  font-weight: bold;
-  font-size: large; 
-}
-.today{
-  font-size: small;
-}
-table, th, td {
-  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
-}
-
-/* Widget4 */
-
-
-.nbrDomicil{
-
-margin-bottom:0.2em ;
-  font-weight: bold;
-  font-size: 2em;
-  color: rgb(3, 189, 91);
-}
-.nbrDomiciltoday{
-  margin: top 0.1em;
-  font-weight:lighter;
-  font-size: 1em;
-  color:  rgb(3, 189, 91);;
-}
-
-/* Widget5 */
-
-
-.containerGraph{
-  border: 0.05em solid rgba(0, 0, 0, 0.2);
-  margin-top: 1em;
-  margin-left: 1em;
-  margin-right: 1em; 
-  padding: 0.5em  ;
-  background: #FFFFFF;
-  box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
-  border-radius: 0.75em;
- 
-  
-}
-
-/* Option */
-.option{
-  height: 100%;
-  width: 100%;
-  display : flex;
-  justify-content: center;
-}
-.containerPut{
-  margin-top: 1em;
-  display : flex;
-  justify-content: center;
-
-  width: 20em; 
-  height: 15em; 
-  padding: 0.5em  ;
-  background: #FFFFFF;
-  border: 0.05em solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
-  border-radius: 0.75em;
-}
-.text {
-  display : flex;
-  font-family: Alef;
-  font-style: normal;
-  font-size: 0.938em;
-  color: #090909;;
-  justify-content: center;
-  text-align: center;
-}
-
-.entree
- {display : flex;
-  justify-content: center;
-  text-align: center;
- }
-
-input{
-
-  margin-top: 1em;
-  margin-bottom: 1em;
- 
-  border: 0.05em solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
-  border-radius: 0.75em;
-}
+  article {
+            
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em; 
+    padding: 0.5em  ;
+    background: #FFFFFF;
+    box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+    }

@@ -1,0 +1,43 @@
+
+   /* Widget2 */
+   .nbrVaccine{
+    font-family: Sarala;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7em; 
+    color: #3056DC; 
+  
+    }
+    .nbrVaccineToday{
+      font-weight:lighter;
+      font-size: 1em;
+      color: #3056DC;
+    }  
+    .nbrDomicil{
+      margin-bottom:0.2em ;
+      font-weight: bold;
+      font-size: 2em;
+      color: rgb(3, 189, 91);
+    }
+    .nbrDomiciltoday{
+      margin: top 0.1em;
+      font-weight:lighter;
+      font-size: 1em;
+      color:  rgb(3, 189, 91);;
+    }
+    .petitcontainer{
+      border: 0.05em solid rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: 0.8em;
+      width: 7em;
+      height: 7em;
+      box-shadow: 0.3em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+      border-radius: 0.75em;
+      padding: 0.05em;
+      font-family: Sarala;
+      font-style: normal;
+    }
+          

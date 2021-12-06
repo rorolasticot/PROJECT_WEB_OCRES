@@ -19,8 +19,6 @@ const Navigation = () => {
                     <div className="titreButton">Map</div>
                 </NavLink>
             </div>
-
-
         </div>
     );
 }

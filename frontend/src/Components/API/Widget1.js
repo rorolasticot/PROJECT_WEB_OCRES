@@ -1,7 +1,6 @@
 import React from "react";
 import SearchBar from "../SearchBar";
-
-//const API_URL =("https://api.covid19tracking.narrativa.com/api/2021-11-25/country/France");
+import "./Widget1.css";
 
 export default class Widget1 extends React.Component {
     constructor(props) {
@@ -61,27 +60,27 @@ export default class Widget1 extends React.Component {
     render() {
         if (this.state.error !== undefined && this.state.post !== []) {
             return (
-                <div className="row">
-                    <div className="column">
-
-                        <div className="row">
-                            <SearchBar search={this.search}
-                                getCountryCall={this.getCountry.bind(this)} />
-                        </div>
-
-                        <div className="row">
-                            <div className="petitcontainer">
-                                <div className="column">
-                                    <div className="nbrCas">{this.state.post.today_confirmed}</div>
-                                    <div className="nbrCastoday">+{this.state.post.today_new_confirmed}</div>
-                                    <div className="nbrCastoday">Nombre de cas</div>
-                                </div>
+                <div className="widget1">
+                    <div className="row">
+                        <div className="column">
+                            <div className="searchBar">
+                                <SearchBar search={this.search}
+                                    getCountryCall={this.getCountry.bind(this)} />
                             </div>
-                            <div className="petitcontainer">
-                                <div className="column">
-                                    <div className="nbrDeces">{this.state.post.today_deaths}</div>
-                                    <div className="nbrDecestoday">+{this.state.post.today_new_deaths}</div>
-                                    <div className="nbrDecestoday">Nombre de décès</div>
+                            <div className="row">
+                                <div className="petitcontainer">
+                                    <div className="column">
+                                        <div className="nbrCas">{this.state.post.today_confirmed}</div>
+                                        <div className="nbrCastoday">+{this.state.post.today_new_confirmed}</div>
+                                        <div className="nbrCastoday">Nombre de cas</div>
+                                    </div>
+                                </div>
+                                <div className="petitcontainer">
+                                    <div className="column">
+                                        <div className="nbrDeces">{this.state.post.today_deaths}</div>
+                                        <div className="nbrDecestoday">+{this.state.post.today_new_deaths}</div>
+                                        <div className="nbrDecestoday">Nombre de décès</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

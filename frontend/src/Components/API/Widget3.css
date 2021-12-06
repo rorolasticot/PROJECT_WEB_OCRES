@@ -1,0 +1,45 @@
+/* Widget3 */
+.tableau{
+    border: 0.05em solid rgba(0, 0, 0, 0.2);
+    width: 25em; 
+    box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+  }
+  tr{
+    text-align: center; 
+  }
+  .ville{
+    width: 12.5em;
+    height: 2em; 
+    text-align: center;
+   
+  }
+  .deces{
+    width: 6.25em; 
+    height: 2em;
+    font-size: large; 
+    font-family: Sarala;
+    font-style: normal;
+    
+    color: #43547e;
+    justify-content: space-around;
+  }
+  .cas{
+    width: 6.25em; 
+    height: 2em; 
+   
+    font-family: Sarala;
+    font-style: normal;
+    
+    color:  rgb(255, 153, 71);
+  }
+  .ecris{
+    font-weight: bold;
+    font-size: large; 
+  }
+  .today{
+    font-size: small;
+  }
+  table, th, td {
+    box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+  }

@@ -1,0 +1,46 @@
+/* Option */
+.option{
+    height: 100%;
+    width: 100%;
+    display : flex;
+    justify-content: center;
+  }
+  .containerPut{
+    margin-top: 1em;
+    display : flex;
+    justify-content: center;
+  
+    width: 20em; 
+    height: 15em; 
+    padding: 0.5em  ;
+    background: #FFFFFF;
+    border: 0.05em solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+  }
+  .text {
+    display : flex;
+    font-family: Alef;
+    font-style: normal;
+    font-size: 0.938em;
+    color: #090909;;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .entree
+   {display : flex;
+    justify-content: center;
+    text-align: center;
+   }
+  
+  input{
+  
+    margin-top: 1em;
+    margin-bottom: 1em;
+   
+    border: 0.05em solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+  }
+  

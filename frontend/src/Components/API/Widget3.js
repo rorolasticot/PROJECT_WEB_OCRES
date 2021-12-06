@@ -1,4 +1,5 @@
 import React from "react";
+import "./Widget3.css"
 
 export default class Widget3 extends React.Component {
 
@@ -71,8 +72,6 @@ export default class Widget3 extends React.Component {
                 </table>
             </div>
         );
-
     }
-
 }
 

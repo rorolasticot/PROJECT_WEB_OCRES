@@ -1,8 +1,5 @@
 import React from "react";
-// import { withStyles } from '@material-ui/core/styles';
-
 import { MapContainer, Circle, TileLayer } from 'react-leaflet';
-
 
 export default class Leaflet extends React.Component {
     render() {

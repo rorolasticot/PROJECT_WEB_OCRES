@@ -13,18 +13,17 @@ function Widget6() {
     return (
         <div className="widget6">
             <table>
-                {
-
-                    precautions.map((val, key) => (
-                        <tr key={`list-elem-${key}`}>
-                            <th className="region" scope="row"> {val.precautioname}</th>
-                            <td className="cas"> <p className="ecris">{val.description}</p></td>
-                        </tr>
-                    ))
-
-                }
+                <tbody>
+                    {
+                        precautions.map((val, key) => (
+                            <tr key={`list-elem-${key}`}>
+                                <th className="region" scope="row"> {val.precautioname}</th>
+                                <td className="cas"> <p className="ecris">{val.description}</p></td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
             </table>
-            {/* "https://ibb.co/NCHttbH" */}
         </div>
     );
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../Components/Navigation';
 import Axios from 'axios';
+import "./Option.css";
 const Option = () => {
     const [precautioname, setprecautioname] = useState("");
     const [description, setdescription] = useState("");
