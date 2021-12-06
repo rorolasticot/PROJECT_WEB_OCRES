@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-
-app.get("/read", async (req, res) => {
-    PRECAUTIONModel.find({}, (err, result) => {
+let PrecautionModel = require("../model");
+router.get("/read", async (req, res) => {
+    PrecautionModel.find({}, (err, result) => {
         if (err) {
             res.send(err)
         }

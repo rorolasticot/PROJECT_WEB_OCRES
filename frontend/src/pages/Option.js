@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navigation from '../Components/Navigation';
 import Axios from 'axios';
 const Option = () => {
-    const [precautioname, setprecautioname] = useState('');
-    const [description, setdescription] = useState('');
-    const [image, setimage] = useState('');
+    const [precautioname, setprecautioname] = useState("");
+    const [description, setdescription] = useState("");
+    const [image, setimage] = useState("");
 
 
     //Ajouter    
     const addToList = () => {
-        Axios.post("http://localhost:3001/insert", {
+        Axios.post("http://localhost:3002/insert", {
+
             precautioname: precautioname,
             description: description,
             image: image

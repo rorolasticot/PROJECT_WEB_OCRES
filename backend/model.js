@@ -1,19 +1,19 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-const dispositionSchema = new mongoose.Schema({
+const PrecautionSchema = new mongoose.Schema({
 
     precautioname: {
         type: String,
-        required: true
+        required: true,
     },
     description: {
         type: String,
-        required: true
+        required: true,
     },
     image: {
         type: String,
-        required: true
+        required: true,
     },
 });
-
-module.exports = mongoose.model("Disposition", dispositionSchema);
+const Precaution = mongoose.model("Precaution", PrecautionSchema);
+module.exports = Precaution;
