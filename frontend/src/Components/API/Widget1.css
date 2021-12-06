@@ -22,18 +22,15 @@
   .nbrDecestoday{ 
     font-weight:lighter;
     font-size: 1em;
-    color: #43547e
-      ;
+    color: #43547e;
      }
      .petitcontainer{
-        border: 0.05em solid rgba(0, 0, 0, 0.2);
-        
+          border: 0.05em solid rgba(0, 0, 0, 0.2);
           display: flex;
           flex-direction: column;
           justify-content: center;
           text-align: center;
           margin: 0.8em;
-       
           width: 7em;
           height: 7em;
           box-shadow: 0.3em 0.25em 0.25em rgba(0, 0, 0, 0.25);
@@ -41,6 +38,5 @@
           padding: 0.05em;
           font-family: Sarala;
           font-style: normal;
-          
       }
       

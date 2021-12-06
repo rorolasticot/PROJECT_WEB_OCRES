@@ -1,8 +1,30 @@
-.widget1 {
+.infos {
     justify-content: center;
-    display: flex;
+    margin-left: 4em;
 }
-.widget2 {
-    justify-content: center;
-    display: flex;
+.tab {
+    justify-content: right;
+    margin-left: 4em;
+}
+.row {
+    display : flex;
+}
+
+ .monApi {
+    margin-top : 2em;
+    margin-left: 20em;
+} 
+
+@media only screen and (max-device-width : 360px) {   
+    .row{display: flex;}
+    .infos {width: 45%;}
+    .tab {width: 45%;}
+    
+}
+
+@media only screen and (max-device-width : 768px) {
+    .row{display: flex;}
+    .infos {width: 45%;}
+    .tab {width: 45%;}
+  
 }

@@ -3,10 +3,10 @@ width: 100%;
 height: 100%;
 }
 
-.row, .container,header {
+/* .row, .container,header {
   display : flex;
   text-align: center; 
-}
+} */
 
 .barre{
   
@@ -14,7 +14,7 @@ width: 100%;
 height: 4.688em; 
 margin-bottom: 2em;
 background: #FF647C; 
-opacity: 0.2;
+opacity: 0.4;
 box-shadow: 0em 0.25em 0.25em rgba(0, 0, 0, 0.25);
 
 }

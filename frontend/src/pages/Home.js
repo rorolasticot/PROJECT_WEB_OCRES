@@ -13,25 +13,27 @@ const Home = () => {
 
     return (
         <div className="home">
-            <div >
+            <div className="nav">
                 <Navigation />
             </div>
             <div className="row">
                 <div className="column">
-                    <Widget1 />
-                    <div className="row">
+                    <div className="infos">
+                        <Widget1 />
                         <Widget2 />
                     </div>
-                    <Widget5 />
-
-                    <Widget6 />
-
+                    <div className="tab">
+                        <Widget3 />
+                    </div>
                 </div>
                 <div className="column">
-                    <Widget3 />
-
+                    <div className="graph">
+                        <Widget5 />
+                    </div>
+                    <div className="monApi">
+                        <Widget6 />
+                    </div>
                 </div>
-
             </div>
         </div>
     );

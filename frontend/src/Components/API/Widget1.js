@@ -63,7 +63,7 @@ export default class Widget1 extends React.Component {
                 <div className="widget1">
                     <div className="row">
                         <div className="column">
-                            <div className="searchBar">
+                            <div className="nav">
                                 <SearchBar search={this.search}
                                     getCountryCall={this.getCountry.bind(this)} />
                             </div>

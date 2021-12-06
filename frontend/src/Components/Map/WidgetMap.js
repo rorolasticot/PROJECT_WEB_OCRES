@@ -78,8 +78,8 @@ export default class WidgetMap extends React.Component {
             <div className="map">
                 <Grid container justify-content="true" alignItems="center" spacing={3}>
                     <Grid item xs={8}>
-                        <Typography id="title" variant='h3'>
-                            Visualizing COVID-19 Over Time
+                        <Typography id="title" variant='h4'>
+                            Visualiser les données du covid dans le temps
                         </Typography>
                     </Grid>
                     <Grid item xs={10}>
@@ -111,9 +111,9 @@ export default class WidgetMap extends React.Component {
                     </Grid>
                     <Grid item xs={8}>
                         <Typography id="title" variant='caption'>
-                            This is a depiction of the spread of COVID-19 over time. We rely on the Johns Hopkins CSSE Data Repository, which is
-                            updated once a day at around 23:59 UTC. For that reason, the most recent data our slider allows users to select is
-                            yesterday's.
+                            Il s'agit d'une représentation de la propagation de COVID-19 dans le temps. Nous nous basons sur le référentiel de données CSSE de Johns Hopkins, qui est
+                            mis à jour une fois par jour vers 23:59 UTC. Pour cette raison, les données les plus récentes que notre curseur permet aux utilisateurs de sélectionner sont celles d'hier.
+                            celles d'hier.
                         </Typography>
                     </Grid>
                 </Grid>

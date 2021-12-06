@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import "./Widget6.css";
 
 function Widget6() {
     const [precautions, setPrecautions] = useState([]);
@@ -11,19 +12,22 @@ function Widget6() {
     }, [])
 
     return (
-        <div className="widget6">
-            <table>
-                <tbody>
-                    {
-                        precautions.map((val, key) => (
-                            <tr key={`list-elem-${key}`}>
-                                <th className="region" scope="row"> {val.precautioname}</th>
-                                <td className="cas"> <p className="ecris">{val.description}</p></td>
-                            </tr>
-                        ))
-                    }
-                </tbody>
-            </table>
+        <div className="apiContainer">
+            <div className="widget6">
+                <div className="titre">Gestes barrière</div>
+                <table>
+                    <tbody>
+                        {
+                            precautions.map((val, key) => (
+                                <tr key={`list-elem-${key}`}>
+                                    <th className="region" scope="row"> {val.precautioname}</th>
+                                    <td className="cas"> <p className="ecris">{val.description}</p></td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 
