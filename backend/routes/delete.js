@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
+let PrecautionModel = require("../model");
 
-app.delete("/delete/:id", async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
 
     const id = req.params.id;
-    await PRECAUTIONModel.findByIdAndRemove(id).exec();
+    await PrecautionModel.findByIdAndRemove(id).exec();
     res.send("deleted");
-
-
 
 });
 module.exports = router;

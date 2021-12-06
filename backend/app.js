@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 
-mongoose.connect("mongodb+srv://nicoro:romane@cluster0.mz6oo.mongodb.net/precaution?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://nicoro:ronico@cluster0.jpzqq.mongodb.net/precaution?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
     }

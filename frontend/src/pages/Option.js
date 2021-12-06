@@ -4,7 +4,6 @@ import Axios from 'axios';
 const Option = () => {
     const [precautioname, setprecautioname] = useState("");
     const [description, setdescription] = useState("");
-    const [image, setimage] = useState("");
 
 
     //Ajouter    
@@ -13,9 +12,8 @@ const Option = () => {
 
             precautioname: precautioname,
             description: description,
-            image: image
         });
-        console.log(precautioname + description + image);
+        console.log(precautioname + description);
     };
 
 
@@ -40,13 +38,6 @@ const Option = () => {
 
                         <input type="text" onChange={(event) => {
                             setdescription(event.target.value);
-                        }} />
-
-                        {/* IMAGE URL INPUT */}
-                        <label className="text">image</label>
-
-                        <input className="entree" type="text" onChange={(event) => {
-                            setimage(event.target.value);
                         }} />
 
                         {/* BOUTON QUI AJOUTE UNE NOUVELLE PRECAUTION AVEC ADD TO LIST A LA BDD */}

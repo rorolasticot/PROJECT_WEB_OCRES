@@ -4,8 +4,7 @@ let PrecautionModel = require("../model");
 router.post("/insert", async (req, res) => {
     const precautioname = req.body.precautioname;
     const description = req.body.description;
-    const image = req.body.image;
-    const Newprecaution = new PrecautionModel({ precautioname: precautioname, description: description, image: image });
+    const Newprecaution = new PrecautionModel({ precautioname: precautioname, description: description });
     try {
         res.send("inserted data")
         await Newprecaution.save();

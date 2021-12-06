@@ -19,7 +19,6 @@ function Widget6() {
                         <tr key={`list-elem-${key}`}>
                             <th className="region" scope="row"> {val.precautioname}</th>
                             <td className="cas"> <p className="ecris">{val.description}</p></td>
-                            <td className="deces"> <img src={val.image} alt="new" /></td>
                         </tr>
                     ))
 
